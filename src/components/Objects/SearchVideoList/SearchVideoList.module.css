@@ -1,0 +1,14 @@
+.container{
+    min-height: 682px;
+    margin: 0 auto;
+}
+
+.container input{
+    width: 87%;
+    padding: 15px 10px;
+    margin-block: 0.5rem;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+}

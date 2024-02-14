@@ -1,0 +1,13 @@
+.category{
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.subCategory{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}

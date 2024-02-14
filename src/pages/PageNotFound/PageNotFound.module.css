@@ -1,0 +1,27 @@
+.pnf{
+    width: 100%;
+    height: calc(100vh - 52px);
+    background-color: #292727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pnf img{
+    width: 300px;
+    height: 300px;
+}
+
+.pnf h1{
+    color: #fff;
+    font-size: 90px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.pnf h2{
+    color: #ccc;
+    font-size: 18px;
+    font-weight: 600;
+}

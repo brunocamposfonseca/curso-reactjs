@@ -1,0 +1,14 @@
+.watch{
+    padding-top: 0px;
+    width: 100%;
+    height: calc(100vh - 84px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.watch h1{
+    font-size: 32px;
+    font-weight: 800;
+}
