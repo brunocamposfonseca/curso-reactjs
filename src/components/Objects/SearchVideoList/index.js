@@ -1,6 +1,7 @@
-import styles from "./SearchVideoList.module.css"
-import VideoList from "../VideoList/index"
-import { useState } from "react";
+import styles from "./SearchVideoList.module.css";
+import VideoList from "../VideoList/index";
+import { useEffect, useState } from "react";
+import Loader from "../Loader";
 
 const filterVideos = (videos, search) => {
     return videos.filter((video) => 
@@ -14,6 +15,11 @@ function SearchVideoList({ videos }) {
     const [ search, setSearch ] = useState("")
     const foundVideos = filterVideos(videos, search)
 
+    const [ loading, setLoading ] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 500)
+    }, [] /*Array de dependencias*/ )
+
     function getVideo(event){
         setSearch(event.target.value)
     }
@@ -26,10 +32,14 @@ function SearchVideoList({ videos }) {
                 value={search}
                 onChange={getVideo}
             />
-            <VideoList 
-                videos={foundVideos} 
-                emptyHeading={`No video found by "${search}"`}
-            />
+            { 
+                //Renderização condicional
+                loading ? <Loader /> : 
+                <VideoList 
+                    videos={foundVideos} 
+                    emptyHeading={`No video found by "${search}"`}
+                />
+            }
         </section>
     );
 }

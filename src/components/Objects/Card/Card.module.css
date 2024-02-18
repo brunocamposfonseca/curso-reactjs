@@ -1,6 +1,10 @@
 .card{
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative
 }
 
 .card img{
@@ -11,4 +15,30 @@
 .card img:hover{
     transform: scale(0.95);
     box-shadow: 0 0 10px #222;
+}
+
+.iconcard{
+    display: flex;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    bottom: 50;
+    cursor: pointer;
+}
+
+.icon{
+    display: flex;
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+}
+
+.icon:hover{
+    background-color: rgba(0, 0, 0, 0.50);
 }
